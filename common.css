@@ -60,7 +60,18 @@ header a{color:#000;}
 		transform: translate(-50%,-50%);
 	}
 }
-.myname{position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;}
+.myname{position:absolute;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;animation-delay:1.5s;animation-name: myName;animation-fill-mode: both;animation-duration: 1s;}
+@keyframes myName {
+	0% {
+    top:50%;left:50%;transform: translate(-50%,-50%) scale(1);
+	}
+	50% {
+		transform: translate(-15%,-15%) scale(.8);
+	}
+	100% {
+		top:0;left:0;transform: translate(0) scale(.8);
+	}
+}
 .myname span{vertical-align: middle;font-size:24px;}
 /*
 .myname span.hide{visibility:hidden;width:0;height:0;opacity:0;font-size:0;transition: .5s ease-in;}
