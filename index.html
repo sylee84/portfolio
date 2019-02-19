@@ -4,9 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SangYoon</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link rel="stylesheet" href="common.css">
-  <title>SangYoon</title>
+  <script type="text/javascript">
+		window.onload = function() {
+			if ($(window).width() < 1200){
+				//document.location.href = "/m/front/static/index.html";
+			}
+		}
+		window.onresize = function() {
+			if ($(window).width() < 1200){
+				//document.location.href = "/m/front/static/index.html";
+			}
+		}
+    $(document).ready(function() {
+        $('body').hide().fadeIn(3000);
+    });
+  </script>
 </head>
 <body>
   <header>

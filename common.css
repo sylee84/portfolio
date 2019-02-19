@@ -90,3 +90,49 @@ header a{color:#000;}
 .myname .port{font-size: 24px}
 
 .sec-2{padding:20px;background-color:#fff;}
+
+
+/* sub */
+.middle{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.card{
+  cursor:pointer;
+  width:340px;
+  height:480px;
+}
+.front, .back{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+.front img{
+  height:100%;
+}
+.front{
+  text-align:center;
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background-color:#f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  color:#2c3e50;
+  text-align: center;
+  width:100%;
+}
+.card:active > .front,
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:active > .back,
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
