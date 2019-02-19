@@ -37,8 +37,8 @@ table {
 body { font-size:12px;letter-spacing:-1px;color:#000;-webkit-text-size-adjust:none;font-family: 'Malgun Gothic', Dotum, '돋움', 'Apple SD Gothic Neo',arial,sans-serif;background-color: #000;}
 select {position:relative;z-index:10;}
 
-header{position:fixed;top:0;left:0;width:100%;height:30px;}
-header a{color:#000;}
+header{z-index:10;position:fixed;top:0;left:0;width:100%;height:30px;text-align:right;}
+header a{font-size:2em;color:#fff;}
 .sec-1{position:relative;overflow:hidden;width:100%;height:100vh;}
 .sec-1::after{content:"";z-index: -1;position:absolute;top:0;left:0;width:100%;height:100%;opacity: .5;animation-delay:.5s;animation-name: sec1back;animation-fill-mode: both;;animation-duration: 5s;background: url('img/img-a.jpg') 50% top no-repeat;background-size: cover;}
 @keyframes sec1back {
