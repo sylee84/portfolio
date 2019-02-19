@@ -49,7 +49,7 @@ header a{color:#000;}
 		transform: scale(1);
 	}
 }
-.sec-1 .fa-arrow-circle-down{position: fixed;bottom:10px;left:50%;font-size: 3em;color:#fff;animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;}
+.sec-1 .fa-arrow-circle-down{position: absolute;bottom:10px;left:50%;font-size: 3em;color:#fff;animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;}
 @keyframes faArrow {
 	0% {
 		transform: translate(-50%,-50%);
@@ -70,7 +70,7 @@ header a{color:#000;}
 		transform: translate(-15%,-15%) scale(.8);
 	}
 	100% {
-		top:0;left:0;transform: translate(0) scale(.8);
+		position:fixed;top:0;left:0;transform: translate(0) scale(.8);
 	}
 }
 .myname span{vertical-align: middle;font-size:24px;}
