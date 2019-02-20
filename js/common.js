@@ -3,10 +3,11 @@ $(document).ready(function() {
   $body = $('body');
   bodyHide();
   windowRwd();
+  cardTrans();
 });
 function windowRwd(){
   window.onload = function() {
-    if ($(window).width() < 1200){
+    if ($(window).width() < 800){
       $body.addClass('mobile').removeClass('pc');
       //document.location.href = "/m/front/static/index.html";
     }else{
@@ -14,7 +15,7 @@ function windowRwd(){
     }
   }
   window.onresize = function() {
-    if ($(window).width() < 1200){
+    if ($(window).width() < 800){
       $body.addClass('mobile').removeClass('pc');
       //document.location.href = "/m/front/static/index.html";
     }else{
@@ -24,4 +25,14 @@ function windowRwd(){
 }
 function bodyHide(){
   $body.hide().fadeIn(3000);
+}
+function cardTrans(){
+  $('.click').click(function(){
+    var $portCard = $('.portfolio_card');
+    if(!$portCard.hasClass('on')){
+      $portCard.addClass('on');
+    }else{
+      $portCard.removeClass('on');
+    }
+  })
 }

@@ -34,13 +34,37 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-body { font-size:12px;letter-spacing:-1px;color:#000;-webkit-text-size-adjust:none;font-family: 'Malgun Gothic', Dotum, '돋움', 'Apple SD Gothic Neo',arial,sans-serif;background-color: #000;}
+body { font-size:12px;letter-spacing:-1px;color:#000;-webkit-text-size-adjust:none;font-family: 'Malgun Gothic', Dotum, '돋움', 'Apple SD Gothic Neo',arial,sans-serif;}
 select {position:relative;z-index:10;}
+body.main{background-color: #000}
 
 header{z-index:10;position:fixed;top:0;left:0;width:100%;height:30px;text-align:right;}
-header a{font-size:2em;color:#fff;}
+header a{display:inline-block;margin-right:10px;font-size:1.5em;color:#fff;}
+
+header .menu{float:right;}
+header .menu a{color:#fff;padding:0 10px;transition: .5s}
+.show-menu-btn, .hide-menu-btn{
+  display:none;
+  transition: .5s;
+  font-size:3em;
+  color: #fff
+}
+.show-menu-btn{
+  float:right;
+  padding:10px;
+}
+#mclick{
+  position:absolute;
+  overflow: hidden;
+  z-index: -10;
+}
+
 .sec-1{position:relative;overflow:hidden;width:100%;height:100vh;}
-.sec-1::after{content:"";z-index: -1;position:absolute;top:0;left:0;width:100%;height:100%;opacity: .5;animation-delay:.5s;animation-name: sec1back;animation-fill-mode: both;;animation-duration: 5s;background: url('img/img-a.jpg') 50% top no-repeat;background-size: cover;}
+.sec-1::after{
+  content:"";z-index: -1;position:absolute;top:0;left:0;width:100%;height:100%;opacity: .5;
+  animation-delay:.5s;animation-name: sec1back;animation-fill-mode: both;;animation-duration: 5s;
+  background: url('../img/img-a.jpg') 50% top no-repeat;background-size: cover;
+}
 @keyframes sec1back {
   from {
 		transform: scale(1.2);
@@ -49,7 +73,10 @@ header a{font-size:2em;color:#fff;}
 		transform: scale(1);
 	}
 }
-.sec-1 .fa-arrow-circle-down{position: absolute;bottom:10px;left:50%;font-size: 3em;color:#fff;animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;}
+.sec-1 .fa-arrow-circle-down{
+  position: absolute;bottom:10px;left:50%;font-size: 3em;color:#fff;
+  animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
+}
 @keyframes faArrow {
 	0% {
 		transform: translate(-50%,-50%);
@@ -61,7 +88,10 @@ header a{font-size:2em;color:#fff;}
 		transform: translate(-50%,-50%);
 	}
 }
-.myname{position:absolute;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;animation-delay:1.5s;animation-name: myName;animation-fill-mode: both;animation-duration: 1s;}
+.myname{
+  position:absolute;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;
+  animation-delay:1.5s;animation-name: myName;animation-fill-mode: both;animation-duration: 1s;
+}
 @keyframes myName {
 	0% {
     top:50%;left:50%;transform: translate(-50%,-50%) scale(1);
@@ -93,23 +123,25 @@ header a{font-size:2em;color:#fff;}
 
 
 /* sub */
-.middle{
+.cd_position{
   position: absolute;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
 }
-.card{
-  cursor:pointer;
-  width:340px;
+.portfolio_card{
+  width:300px;
   height:480px;
 }
+.click{
+  display:none;
+}
 .front, .back{
+  overflow: hidden;
+  position: absolute;
   width:100%;
   height:100%;
-  overflow: hidden;
   backface-visibility: hidden;
-  position: absolute;
   transition: transform .6s linear;
 }
 .front img{
@@ -124,15 +156,63 @@ header a{font-size:2em;color:#fff;}
   transform: perspective(600px) rotateY(180deg);
 }
 .back-content{
-  color:#2c3e50;
-  text-align: center;
   width:100%;
+  text-align: center;
+  color:#2c3e50;
 }
-.card:active > .front,
-.card:hover > .front{
+.pc .portfolio_card:active > .front,
+.pc .portfolio_card:hover > .front{
   transform: perspective(600px) rotateY(-180deg);
 }
-.card:active > .back,
-.card:hover > .back{
+.pc .portfolio_card:active > .back,
+.pc .portfolio_card:hover > .back{
   transform: perspective(600px) rotateY(0deg);
+}
+@media screen and (max-width:800px) {
+  .show-menu-btn, .hide-menu-btn{
+    display:block;
+  }
+  .menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100vh;
+    background-color: #333;
+    text-align:center;
+    padding:80px 0;
+    transition: .7s
+  }
+  .menu a{
+    display:block;
+    padding:20px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top:40px;
+    left:40px;
+  }
+  #mclick:checked ~ .menu{
+    right:0;
+  }
+
+  .portfolio_card{
+    width:60%;
+    height:60%;
+  }
+  .click{
+    display:block;
+    position:absolute;
+    bottom:0;
+    right:-20px;
+    width:20px;
+    height:20px;
+    background-color:#fff;
+  }
+  .mobile .portfolio_card.on > .front{
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  .mobile .portfolio_card.on > .back{
+    transform: perspective(600px) rotateY(0deg);
+  }
 }
