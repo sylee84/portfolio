@@ -149,7 +149,6 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
   height:100%;
 }
 .front{
-  z-index: 10;
   text-align:center;
   background-color:#000;
   transform: perspective(800px) rotateY(0deg);
@@ -165,11 +164,11 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
 }
 .pc .portfolio_card:active > .front,
 .pc .portfolio_card:hover > .front{
-  transform: perspective(300px) rotateY(-180deg);
+  transform: perspective(800px) rotateY(-180deg);
 }
 .pc .portfolio_card:active > .back,
 .pc .portfolio_card:hover > .back{
-  transform: perspective(300px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
 }
 
 @media screen and (max-width:800px) {
@@ -215,7 +214,6 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
     background-color:#fff;
   }
   .mobile .portfolio_card.on > .front{
-    z-index: 10;
     transform: perspective(800px) rotateY(-180deg);
   }
   .mobile .portfolio_card.on > .back{
