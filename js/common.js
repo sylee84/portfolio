@@ -4,6 +4,7 @@ $(document).ready(function() {
   bodyHide();
   windowRwd();
   cardTrans();
+  cardSwiper();
 });
 function windowRwd(){
   window.onload = function() {
@@ -35,4 +36,24 @@ function cardTrans(){
       $portCard.removeClass('on');
     }
   })
+}
+function cardSwiper(){
+  var swiper = new Swiper('.swiper-container', {
+    loop:true,
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows : true,
+    },
+    pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		},
+  });
 }
