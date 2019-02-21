@@ -24,7 +24,7 @@ function windowRwd(){
   }
 }
 function bodyHide(){
-  $body.hide().fadeIn(3000);
+  $body.hide().fadeIn(1500);
 }
 function cardTrans(){
   $('.click').click(function(){

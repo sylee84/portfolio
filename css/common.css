@@ -29,6 +29,7 @@ img{vertical-align:top;}
 address, article, aside, blockquote, body, center, dd, dir, div, dl, dt, figure, figcaption, footer, form, h1, h2, h3, h4, h5, h6, header,
 hgroup, hr, html, legend, listing, menu, nav, ol, p, plaintext, pre, section, summary, ul, xmp {
     display: block;
+    box-sizing: border-box;
 }
 table {
     border-collapse: collapse;
@@ -89,14 +90,14 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
 	}
 }
 .myname{
-  position:absolute;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;
+  position:fixed;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;
   animation-delay:1.5s;animation-name: myName;animation-fill-mode: both;animation-duration: 1s;
 }
 @keyframes myName {
 	0% {
     top:50%;left:50%;transform: translate(-50%,-50%) scale(1);
 	}
-	50% {
+	70% {
 		transform: translate(-15%,-15%) scale(.8);
 	}
 	100% {
@@ -108,7 +109,7 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
 .myname span.hide{visibility:hidden;width:0;height:0;opacity:0;font-size:0;transition: .5s ease-in;}
 .myname:hover span.hide{visibility:visible;width:1em;height:1em;opacity:1;font-size:24px;}
 */
-.myname span.hide{animation-delay:0.5s;animation-name: textAction;animation-fill-mode: both;animation-duration: .5s;}
+.myname span.hide{animation-delay:.5s;animation-name: textAction;animation-fill-mode: both;animation-duration: .8s;}
 @keyframes textAction {
 	from {
 		visibility:hidden;width:0;height:0;opacity:0;font-size:0;transition: .5s ease-in;
@@ -148,7 +149,9 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
   height:100%;
 }
 .front{
+  z-index: 10;
   text-align:center;
+  background-color:#000;
   transform: perspective(600px) rotateY(0deg);
 }
 .back{
@@ -193,6 +196,7 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
     left:40px;
   }
   #mclick:checked ~ .menu{
+    display:block;
     right:0;
   }
 
