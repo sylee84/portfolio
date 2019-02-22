@@ -39,7 +39,7 @@ function cardTrans(){
 }
 function cardSwiper(){
   var swiper = new Swiper('.portslide.swiper-container', {
-    loop:true,
+    loop:false,
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
