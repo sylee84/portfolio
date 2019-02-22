@@ -159,12 +159,11 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 }
 .portslide .swiper-pagination{
   position:fixed;
+  font-size:1.5em;
+  color:var(--color-ff);
 }
 
-.portslide .fa-arrow-circle-down{
-  position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
-  animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
-}
+.portslide .fa-arrow-circle-down{display:none;}
 @keyframes faArrow {
 	0% {
 		transform: translate(-50%,-50%);
@@ -232,5 +231,9 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   }
   .mobile .portfolio_card.on > .back{
     transform: perspective(800px) rotateY(0deg);
+  }
+  .portslide .fa-arrow-circle-down{
+    display:block;position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
+    animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
   }
 }
