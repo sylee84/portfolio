@@ -38,21 +38,21 @@ function cardTrans(){
   })
 }
 function cardSwiper(){
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.portslide.swiper-container', {
     loop:true,
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 300,
-      modifier: 1,
+      rotate: 45,
+      stretch: 100,
+      depth: 500,
+      modifier: 3,
       slideShadows : true,
     },
     pagination: {
-			el: '.swiper-pagination',
+			el: '.portslide .swiper-pagination',
 			type: 'fraction',
 		},
   });

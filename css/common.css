@@ -77,21 +77,6 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 		transform: scale(1);
 	}
 }
-.sec-1 .fa-arrow-circle-down{
-  position: absolute;bottom:10px;left:50%;font-size: 3em;color:var(--color-ff);
-  animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
-}
-@keyframes faArrow {
-	0% {
-		transform: translate(-50%,-50%);
-	}
-	50% {
-		transform: translate(-50%,0);
-	}
-  100% {
-		transform: translate(-50%,-50%);
-	}
-}
 .myname{
   position:fixed;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:var(--color-ff);
   animation-delay:1.5s;animation-name: myName;animation-fill-mode: both;animation-duration: 1s;
@@ -123,8 +108,6 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 }
 .myname .port{font-size: 24px}
 
-.sec-2{padding:20px;background-color:var(--color-ff);}
-
 
 /* sub */
 .cd_position{
@@ -153,7 +136,8 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 }
 .front{
   text-align:center;
-  background-color:#000;
+  background:#000 url("../img/img-b.jpg") center center no-repeat;
+  background-size: cover;
   transform: perspective(800px) rotateY(0deg);
 }
 .back{
@@ -173,7 +157,25 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 .pc .portfolio_card:hover > .back{
   transform: perspective(800px) rotateY(0deg);
 }
+.portslide .swiper-pagination{
+  position:fixed;
+}
 
+.portslide .fa-arrow-circle-down{
+  position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
+  animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
+}
+@keyframes faArrow {
+	0% {
+		transform: translate(-50%,-50%);
+	}
+	50% {
+		transform: translate(-50%,0);
+	}
+  100% {
+		transform: translate(-50%,-50%);
+	}
+}
 @media screen and (max-width:800px) {
   .show-menu-btn, .hide-menu-btn{
     display:block;
@@ -217,10 +219,12 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   .click{
     display:block;
     position:absolute;
-    bottom:0;
-    right:-20px;
-    width:20px;
-    height:20px;
+    bottom:1px;
+    right:-40px;
+    width:40px;
+    height:30px;
+    line-height:30px;
+    font-size:1.5em;
     background-color:var(--color-ff);
   }
   .mobile .portfolio_card.on > .front{
