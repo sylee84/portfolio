@@ -36,19 +36,22 @@ table {
     border-spacing: 0;
 }
 body { font-size:12px;letter-spacing:-1px;color:#000;-webkit-text-size-adjust:none;font-family: 'Malgun Gothic', Dotum, '돋움', 'Apple SD Gothic Neo',arial,sans-serif;}
-select {position:relative;z-index:10;}
 body.main{background-color: #000}
+select {position:relative;z-index:10;}
 
+:root{
+  --color-ff:#fff;
+}
 header{z-index:10;position:fixed;top:0;left:0;width:100%;height:30px;text-align:right;}
-header a{display:inline-block;margin-right:10px;font-size:1.5em;color:#fff;}
+header a{display:inline-block;margin-right:10px;font-size:1.5em;color:var(--color-ff);}
 
 header .menu{float:right;}
-header .menu a{color:#fff;padding:0 10px;transition: .5s}
+header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 .show-menu-btn, .hide-menu-btn{
   display:none;
   transition: .5s;
   font-size:3em;
-  color: #fff
+  color: var(--color-ff)
 }
 .show-menu-btn{
   float:right;
@@ -75,7 +78,7 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
 	}
 }
 .sec-1 .fa-arrow-circle-down{
-  position: absolute;bottom:10px;left:50%;font-size: 3em;color:#fff;
+  position: absolute;bottom:10px;left:50%;font-size: 3em;color:var(--color-ff);
   animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
 }
 @keyframes faArrow {
@@ -90,7 +93,7 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
 	}
 }
 .myname{
-  position:fixed;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:#fff;
+  position:fixed;transform: translate(-50%,-50%);text-align:center;font-size:0;font-weight:bold;color:var(--color-ff);
   animation-delay:1.5s;animation-name: myName;animation-fill-mode: both;animation-duration: 1s;
 }
 @keyframes myName {
@@ -120,7 +123,7 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
 }
 .myname .port{font-size: 24px}
 
-.sec-2{padding:20px;background-color:#fff;}
+.sec-2{padding:20px;background-color:var(--color-ff);}
 
 
 /* sub */
@@ -199,6 +202,13 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
     display:block;
     right:0;
   }
+  #mclick ~ .menu a{
+    opacity: 0;
+  }
+  #mclick:checked ~ .menu a{
+    margin-top:40px;
+    opacity: 1;
+  }
 
   .portfolio_card{
     width:60%;
@@ -211,7 +221,7 @@ header .menu a{color:#fff;padding:0 10px;transition: .5s}
     right:-20px;
     width:20px;
     height:20px;
-    background-color:#fff;
+    background-color:var(--color-ff);
   }
   .mobile .portfolio_card.on > .front{
     transform: perspective(800px) rotateY(-180deg);
