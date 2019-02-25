@@ -183,17 +183,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 }
 
 .portslide .fa-arrow-circle-down{display:none;}
-@keyframes faArrow {
-	0% {
-		transform: translate(-50%,-50%);
-	}
-	50% {
-		transform: translate(-50%,0);
-	}
-  100% {
-		transform: translate(-50%,-50%);
-	}
-}
+
 @media screen and (max-width:800px) {
   .show-menu-btn, .hide-menu-btn{
     display:block;
@@ -245,14 +235,25 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     font-size:1.5em;
     background-color:var(--color-ff);
   }
-  .mobile .portfolio_card.on > .front{
-    transform:rotateY(-180deg) perspective(800px) ;
+  .mobile .portfolio_card > .front{
+    transform:rotateY(-180deg) perspective(0) ;
   }
   .mobile .portfolio_card.on > .back{
-    transform:rotateY(0deg) perspective(800px) ;
+    transform:rotateY(0deg) perspective(0) ;
   }
   .portslide .fa-arrow-circle-down{
     display:block;position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
     animation-delay:.5s;animation-name: faArrow;animation-fill-mode: both;;animation-duration: .8s;animation-iteration-count: infinite;
+  }
+  @keyframes faArrow {
+  	0% {
+  		transform: translate(-50%,-50%);
+  	}
+  	50% {
+  		transform: translate(-50%,0);
+  	}
+    100% {
+  		transform: translate(-50%,-50%);
+  	}
   }
 }
