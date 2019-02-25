@@ -47,8 +47,8 @@ function cardSwiper(){
     coverflowEffect: {
       rotate: 45,
       stretch: 100,
-      depth: 500,
-      modifier: 2,
+      depth: 400,
+      modifier: 1,
       slideShadows : false,
     },
     pagination: {
