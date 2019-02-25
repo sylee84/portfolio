@@ -29,17 +29,17 @@ function bodyHide(){
 }
 function cardTrans(){
   $('.click').click(function(){
-    var $portCard = $('.portfolio_card');
-    if(!$portCard.hasClass('on')){
-      $portCard.addClass('on');
+   var $this = $(this);
+    if(!$this.parent().hasClass('on')){
+      $this.parent().addClass('on');
     }else{
-      $portCard.removeClass('on');
+      $this.parent().removeClass('on');
     }
   })
 }
 function cardSwiper(){
   var swiper = new Swiper('.portslide.swiper-container', {
-    loop:true,
+    loop:false,
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -54,6 +54,9 @@ function cardSwiper(){
     pagination: {
 			el: '.portslide .swiper-pagination',
 			type: 'fraction',
-		},
+		}
+  });
+  swiper.on('slideChange', function () {
+    $('.portslide li > div').removeClass('on');
   });
 }
