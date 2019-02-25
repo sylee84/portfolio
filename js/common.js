@@ -1,6 +1,7 @@
 var $body;
 $(document).ready(function() {
   $body = $('body');
+  $('#mclick').attr('checked',false);
   bodyHide();
   windowRwd();
   cardTrans();
@@ -38,25 +39,39 @@ function cardTrans(){
   })
 }
 function cardSwiper(){
-  var swiper = new Swiper('.portslide.swiper-container', {
-    loop:false,
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 45,
-      stretch: 100,
-      depth: 400,
-      modifier: 1,
-      slideShadows : false,
-    },
-    pagination: {
-			el: '.portslide .swiper-pagination',
-			type: 'fraction',
-		}
-  });
-  swiper.on('slideChange', function () {
-    $('.portslide li > div').removeClass('on');
-  });
+    var sPd, roTa, moDi;
+    if ($(window).width() < 800){
+      sPd = 500;
+      roTa = 110;
+      moDi = 1;
+    }else{
+      sPd = 800;
+      roTa = 90;
+      moDi = 3;
+    }
+    var swiper = new Swiper('.portslide.swiper-container', {
+      loop:false,
+      speed: sPd,
+      effect: 'coverflow',
+      grabCursor: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: roTa,
+        stretch: 150,
+        depth: 100,
+        modifier: moDi,
+        slideShadows : false,
+      },
+      pagination: {
+  			el: '.portslide .swiper-pagination',
+  			type: 'fraction',
+  		},
+      navigation: {
+        nextEl: '.portslide-prev',
+        prevEl: '.portslide-next',
+      },
+    });
+    swiper.on('slideChange', function () {
+      $('.portslide li > div').removeClass('on');
+    });
 }
