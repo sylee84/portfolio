@@ -1,11 +1,13 @@
 var $body;
 $(document).ready(function() {
   $body = $('body');
-  $('#mclick').attr('checked',false);
   bodyHide();
   windowRwd();
   cardTrans();
   cardSwiper();
+  window.onbeforeunload = function(e) {
+    $('#mclick').attr('checked',false);
+  };
 });
 function windowRwd(){
   window.onload = function() {
