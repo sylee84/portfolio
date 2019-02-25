@@ -236,7 +236,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   }
   .mobile .portfolio_card.on > .front{
     transform:rotateY(-180deg) perspective(800px) ;
-    backface-visibility: hidden;
+    backface-visibility: visible;
   }
   .mobile .portfolio_card.on > .back{
     transform:rotateY(0deg) perspective(800px) ;
