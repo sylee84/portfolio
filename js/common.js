@@ -44,7 +44,7 @@ function cardSwiper(){
     var sPd, roTa, moDi;
     if ($(window).width() < 800){
       sPd = 500;
-      roTa = 110;
+      roTa = 80;
       moDi = 1;
     }else{
       sPd = 800;
