@@ -238,8 +238,12 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     transform:rotateY(180deg) perspective(800px) ;
     backface-visibility: visible;
   }
+  .mobile .portfolio_card > .back{
+    visibility: hidden;
+  }
   .mobile .portfolio_card.on > .back{
     transform:rotateY(0deg) perspective(800px) ;
+    visibility: visible;
     backface-visibility: hidden;
   }
   .portslide .fa-arrow-circle-down{
