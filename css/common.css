@@ -64,7 +64,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   z-index: -10;
 }
 
-.sec-1{z-index:10;position:fixed;overflow:hidden;width:100%;}
+.sec-1{z-index:10;position:fixed;overflow:hidden;width:100%;height:100%;}
 .sec-1::after{
   content:"";z-index: -1;position:absolute;top:0;left:0;width:100%;height:100%;opacity: .5;
   animation-delay:.5s;animation-name: sec1back;animation-fill-mode: both;;animation-duration: 5s;
@@ -158,7 +158,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 }
 .portslide.swiper-container {
   width: 100%;
-  height:100vh;
+  height:100%;
 	animation-delay:2.5s;
 	animation-name: fadeInUp;
 	animation-fill-mode: both;
@@ -236,7 +236,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   }
   .mobile .portfolio_card.on > .front{
     transform:rotateY(-180deg) perspective(800px) ;
-    backface-visibility: visible;
+    backface-visibility: hidden;
   }
   .mobile .portfolio_card.on > .back{
     transform:rotateY(0deg) perspective(800px) ;
