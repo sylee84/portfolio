@@ -39,6 +39,7 @@ body { font-size:12px;letter-spacing:-1px;color:#000;-webkit-text-size-adjust:no
 body.main{background-color: #000}
 select {position:relative;z-index:10;}
 
+/*ie x*/
 :root{
   --color-ff:#fff;
 }
@@ -138,11 +139,11 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   text-align:center;
   background:#000 url("../img/img-b.jpg") center center no-repeat;
   background-size: cover;
-  transform: perspective(800px) rotateY(0deg);
+  transform:rotateY(0deg) perspective(800px);
 }
 .back{
   background-color:#f1f1f1;
-  transform: perspective(800px) rotateY(180deg);
+  transform:rotateY(180deg) perspective(800px);
 }
 .back-content{
   width:100%;
@@ -151,11 +152,11 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 }
 .pc .portfolio_card:active > .front,
 .pc .portfolio_card:hover > .front{
-  transform: perspective(800px) rotateY(-180deg);
+  transform:rotateY(-180deg) perspective(800px) ;
 }
 .pc .portfolio_card:active > .back,
 .pc .portfolio_card:hover > .back{
-  transform: perspective(800px) rotateY(0deg);
+  transform:rotateY(0deg) perspective(800px) ;
 }
 .portslide.swiper-container {
   width: 100%;
@@ -245,10 +246,10 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     background-color:var(--color-ff);
   }
   .mobile .portfolio_card.on > .front{
-    transform: perspective(800px) rotateY(-180deg);
+    transform:rotateY(-180deg) perspective(800px) ;
   }
   .mobile .portfolio_card.on > .back{
-    transform: perspective(800px) rotateY(0deg);
+    transform:rotateY(0deg) perspective(800px) ;
   }
   .portslide .fa-arrow-circle-down{
     display:block;position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
