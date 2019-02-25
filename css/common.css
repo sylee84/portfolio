@@ -226,8 +226,8 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   .click{
     display:block;
     position:absolute;
-    bottom:1px;
-    right:-40px;
+    bottom:0;
+    right:-39px;
     width:40px;
     height:30px;
     line-height:30px;
@@ -235,10 +235,12 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     background-color:var(--color-ff);
   }
   .mobile .portfolio_card.on > .front{
-    transform:rotateY(-90deg) perspective(800px) ;
+    transform:rotateY(-180deg) perspective(800px) ;
+    backface-visibility: hidden;
   }
   .mobile .portfolio_card.on > .back{
-    transform:rotateY(360deg) perspective(800px) ;
+    transform:rotateY(0deg) perspective(800px) ;
+    backface-visibility: hidden;
   }
   .portslide .fa-arrow-circle-down{
     display:block;position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
