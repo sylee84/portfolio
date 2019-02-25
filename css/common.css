@@ -234,7 +234,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     background-color:var(--color-ff);
   }
   .mobile .portfolio_card.on > .front{
-    transform:rotateY(-360deg) perspective(800px) ;
+    transform:rotateY(-180deg) perspective(800px) ;
   }
   .mobile .portfolio_card.on > .back{
     transform:rotateY(0deg) perspective(800px) ;

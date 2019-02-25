@@ -10,7 +10,7 @@ function windowRwd(){
   window.onload = function() {
     if ($(window).width() < 800){
       $body.addClass('mobile').removeClass('pc');
-      //document.location.href = "/m/front/static/index.html";
+      //document.location.href = "";
     }else{
       $body.addClass('pc').removeClass('mobile');
     }
@@ -18,7 +18,7 @@ function windowRwd(){
   window.onresize = function() {
     if ($(window).width() < 800){
       $body.addClass('mobile').removeClass('pc');
-      //document.location.href = "/m/front/static/index.html";
+      //document.location.href = "";
     }else{
       $body.addClass('pc').removeClass('mobile');
     }
@@ -39,7 +39,7 @@ function cardTrans(){
 }
 function cardSwiper(){
   var swiper = new Swiper('.portslide.swiper-container', {
-    loop:false,
+    loop:true,
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -48,8 +48,8 @@ function cardSwiper(){
       rotate: 45,
       stretch: 100,
       depth: 500,
-      modifier: 3,
-      slideShadows : true,
+      modifier: 2,
+      slideShadows : false,
     },
     pagination: {
 			el: '.portslide .swiper-pagination',
