@@ -87,13 +87,13 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     top:50%;left:50%;transform: translate(-50%,-50%) scale(1);
 	}
 	50% {
-		transform: translate(-15%,-15%) scale(.8);
+		transform: translate(-15%,-15%) scale(.5);
 	}
 	100% {
-		position:fixed;top:0;left:0;transform: translate(0) scale(.8);
+		position:fixed;top:-15px;left:-35px;transform: translate(0) scale(.5);
 	}
 }
-.myname span{vertical-align: middle;font-size:24px;}
+.myname span{vertical-align: middle;font-size:36px;}
 /*
 .myname span.hide{visibility:hidden;width:0;height:0;opacity:0;font-size:0;transition: .5s ease-in;}
 .myname:hover span.hide{visibility:visible;width:1em;height:1em;opacity:1;font-size:24px;}
@@ -104,10 +104,10 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
 		visibility:hidden;width:0;height:0;opacity:0;font-size:0;transition: .5s ease-in;
 	}
 	to {
-		visibility:visible;width:1em;height:1em;opacity:1;font-size:24px;
+		visibility:visible;width:1em;height:1em;opacity:1;font-size:36px;
 	}
 }
-.myname .port{font-size: 24px}
+.myname .port{font-size: 36px}
 
 
 /* sub */
@@ -236,10 +236,7 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   }
   .mobile .portfolio_card.on > .front{
     transform:rotateY(180deg) perspective(800px) ;
-    backface-visibility: hidden;
-  }
-  .mobile .portfolio_card > .back{
-    transform:rotateY(180deg) perspective(800px) ;
+    backface-visibility: visible;
   }
   .mobile .portfolio_card.on > .back{
     transform:rotateY(0deg) perspective(800px) ;
