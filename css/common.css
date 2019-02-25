@@ -235,11 +235,14 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     background-color:var(--color-ff);
   }
   .mobile .portfolio_card.on > .front{
-    transform:rotateY(-180deg) perspective(0) ;
+    transform:rotateY(-180deg) perspective(800px) ;
     backface-visibility: hidden;
   }
+  .mobile .portfolio_card > .back{
+    transform:rotateY(180deg) perspective(800px) ;
+  }
   .mobile .portfolio_card.on > .back{
-    transform:rotateY(0deg) perspective(0) ;
+    transform:rotateY(0deg) perspective(800px) ;
     backface-visibility: hidden;
   }
   .portslide .fa-arrow-circle-down{
