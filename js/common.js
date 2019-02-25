@@ -5,9 +5,9 @@ $(document).ready(function() {
   windowRwd();
   cardTrans();
   cardSwiper();
-  window.onbeforeunload = function(e) {
+  $('.menu').click(function(){
     $('#mclick').attr('checked',false);
-  };
+  })
 });
 function windowRwd(){
   window.onload = function() {
