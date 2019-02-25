@@ -150,11 +150,9 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
   text-align: center;
   color:#2c3e50;
 }
-.pc .portfolio_card:active > .front,
 .pc .portfolio_card:hover > .front{
   transform:rotateY(-180deg) perspective(800px) ;
 }
-.pc .portfolio_card:active > .back,
 .pc .portfolio_card:hover > .back{
   transform:rotateY(0deg) perspective(800px) ;
 }
@@ -235,11 +233,11 @@ header .menu a{color:var(--color-ff);padding:0 10px;transition: .5s}
     font-size:1.5em;
     background-color:var(--color-ff);
   }
-  .mobile .portfolio_card > .front{
-    transform:rotateY(-180deg) perspective(0) ;
+  .mobile .portfolio_card.on > .front{
+    transform:rotateY(-360deg) perspective(800px) ;
   }
   .mobile .portfolio_card.on > .back{
-    transform:rotateY(0deg) perspective(0) ;
+    transform:rotateY(0deg) perspective(800px) ;
   }
   .portslide .fa-arrow-circle-down{
     display:block;position: absolute;bottom:40px;right:-42px;font-size: 2em;color:var(--color-ff);
