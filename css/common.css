@@ -373,6 +373,7 @@ header .menu a {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: -webkit-transform .6s linear;
   transition: -webkit-transform .6s linear;
