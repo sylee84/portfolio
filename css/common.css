@@ -19,12 +19,7 @@ blockquote, q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
-  content: '';
-  content: none;
-}
-
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
@@ -541,11 +536,9 @@ header .menu a {
     background-color: #fff;
   }
   .mobile .portfolio_card.on > .front {
-    -webkit-transform: rotateY(-180deg) perspective(800px);
             transform: rotateY(-180deg) perspective(800px);
   }
   .mobile .portfolio_card.on > .back {
-    -webkit-transform: rotateY(0deg) perspective(800px);
             transform: rotateY(0deg) perspective(800px);
   }
   .portslide .fa-arrow-circle-down {
