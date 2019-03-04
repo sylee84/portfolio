@@ -135,7 +135,7 @@ select {
 
 /*ie x*/
 /* :root{
-  --color-ff:$color-fff;
+  --color-ff:#fff;
 } var(--color-ff) */
 header {
   z-index: 20;
@@ -167,10 +167,6 @@ header .menu a {
 
 .show-menu-btn, .hide-menu-btn {
   display: none;
-  -webkit-transition: .5s;
-  transition: .5s;
-  font-size: 3em;
-  color: #fff;
 }
 
 .show-menu-btn {
@@ -364,6 +360,10 @@ header .menu a {
   height: 80%;
 }
 
+.portfolio_card .front {
+  background-color: #fff;
+}
+
 .click {
   display: none;
 }
@@ -383,8 +383,6 @@ header .menu a {
 
 .front {
   text-align: center;
-  background: #000 url("../img/img-b.jpg") center top no-repeat;
-  background-size: cover;
   -webkit-transform: rotateY(0deg) perspective(800px);
           transform: rotateY(0deg) perspective(800px);
 }
@@ -393,15 +391,36 @@ header .menu a {
   height: 100%;
 }
 
+.front ul {
+  padding-top: 26%;
+}
+
+.front li {
+  display: inline-block;
+  margin: 10px;
+}
+
 .back {
-  background-color: #f1f1f1;
+  background-color: #000;
   -webkit-transform: rotateY(180deg) perspective(800px);
           transform: rotateY(180deg) perspective(800px);
 }
 
+.back ul {
+  padding: 20px;
+}
+
+.back ul li {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #fff;
+}
+
 .back-content {
+  overflow-y: auto;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  text-align: left;
   color: #2c3e50;
 }
 
@@ -487,6 +506,10 @@ header .menu a {
 @media screen and (max-width: 800px) {
   .show-menu-btn, .hide-menu-btn {
     display: block;
+    -webkit-transition: .5s;
+    transition: .5s;
+    font-size: 3em;
+    color: #fff;
   }
   .menu {
     position: fixed;
@@ -521,8 +544,11 @@ header .menu a {
     opacity: 0;
   }
   .portfolio_card {
-    width: 60%;
-    height: 60%;
+    width: 75%;
+    height: 80%;
+  }
+  .portfolio_card.pc01 .front {
+    overflow-y: auto;
   }
   .click {
     display: block;
@@ -535,6 +561,17 @@ header .menu a {
     font-size: 1.5em;
     background-color: #fff;
   }
+  .mobile .portfolio_card .front ul {
+    padding: 20px;
+  }
+  .mobile .portfolio_card .back ul {
+    opacity: 0;
+    -webkit-transition: 0.7s all;
+    transition: 0.7s all;
+  }
+  .mobile .portfolio_card .back .back-content {
+    overflow-y: hidden;
+  }
   .mobile .portfolio_card.on > .front {
     -webkit-transform: rotateY(-180deg) perspective(800px);
             transform: rotateY(-180deg) perspective(800px);
@@ -542,6 +579,12 @@ header .menu a {
   .mobile .portfolio_card.on > .back {
     -webkit-transform: rotateY(0deg) perspective(800px);
             transform: rotateY(0deg) perspective(800px);
+  }
+  .mobile .portfolio_card.on > .back ul {
+    opacity: 1;
+  }
+  .mobile .portfolio_card.on > .back .back-content {
+    overflow-y: auto;
   }
   .portslide .fa-arrow-circle-down {
     display: block;

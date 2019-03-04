@@ -5,7 +5,7 @@ $(document).ready(function() {
   windowRwd();
   cardTrans();
   cardSwiper();
-  $('.menu').click(function(){
+  $('.menu a').click(function(){
     $('#mclick').attr('checked',false);
   })
 });

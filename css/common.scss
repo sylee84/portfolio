@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+$color-000:#000;
 $color-fff:#fff;
 
 /* reset */
@@ -123,11 +124,11 @@ table {
 body {
   font-size: 12px;
   letter-spacing: -1px;
-  color: #000;
+  color: $color-000;
   -webkit-text-size-adjust: none;
   font-family: 'Malgun Gothic', Dotum, '돋움', 'Apple SD Gothic Neo',arial,sans-serif;
   &.main {
-    background-color: #000;
+    background-color: $color-000;
   }
 }
 
@@ -138,7 +139,7 @@ select {
 
 /*ie x*/
 /* :root{
-  --color-ff:$color-fff;
+  --color-ff:#fff;
 } var(--color-ff) */
 
 header {
@@ -167,9 +168,6 @@ header {
 
 .show-menu-btn, .hide-menu-btn {
   display: none;
-  transition: .5s;
-  font-size: 3em;
-  color: $color-fff;
 }
 
 .show-menu-btn {
@@ -290,6 +288,9 @@ header {
 
 
 .portfolio_card {
+  .front{
+    background-color: $color-fff;
+  }
   position: absolute;
   top: 50%;
   left: 50%;
@@ -315,20 +316,35 @@ header {
   img {
     height: 100%;
   }
+  ul {
+    padding-top:26%;
+  }
+  li {
+    display:inline-block;
+    margin:10px;
+  }
   text-align: center;
-  background: #000 url("../img/img-b.jpg") center top no-repeat;
-  background-size: cover;
   transform: rotateY(0deg) perspective(800px);
 }
 
 .back {
-  background-color: #f1f1f1;
+  ul{
+    padding:20px;
+  }
+  ul li{
+    margin-bottom:20px;
+    font-size:1.5em;
+    color:$color-fff;
+  }
+  background-color: $color-000;
   transform: rotateY(180deg) perspective(800px);
 }
 
 .back-content {
+  overflow-y:auto; 
   width: 100%;
-  text-align: center;
+  height: 100%;
+  text-align: left;
   color: #2c3e50;
 }
 
@@ -397,6 +413,9 @@ header {
 @media screen and (max-width: 800px) {
   .show-menu-btn, .hide-menu-btn {
     display: block;
+    transition: .5s;
+    font-size: 3em;
+    color: $color-fff;
   }
   .menu {
     position: fixed;
@@ -434,8 +453,11 @@ header {
     }
   }
   .portfolio_card {
-    width: 60%;
-    height: 60%;
+    &.pc01 .front{
+      overflow-y:auto;
+    }
+    width: 75%;
+    height: 80%;
   }
   .click {
     display: block;
@@ -448,12 +470,30 @@ header {
     font-size: 1.5em;
     background-color: $color-fff;
   }
+  .mobile .portfolio_card{
+    .front ul {
+     padding:20px;
+    }
+    .back ul {
+      opacity: 0;
+      transition: 0.7s all;
+     }
+    .back .back-content{
+      overflow-y: hidden;
+    }
+  }
   .mobile .portfolio_card.on > {
     .front {
       transform: rotateY(-180deg) perspective(800px);
     }
     .back {
       transform: rotateY(0deg) perspective(800px);
+    }
+    .back ul {
+      opacity: 1;
+     }
+    .back .back-content{
+      overflow-y: auto;
     }
   }
   .portslide .fa-arrow-circle-down {
