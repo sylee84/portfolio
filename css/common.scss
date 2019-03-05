@@ -215,30 +215,37 @@ header {
   }
 }
 
-
-.myname {
+.myname{
   position: fixed;
-  transform: translate(-50%, -50%);
+  left:0;
   text-align: center;
   font-size: 0;
+  color:$color-fff;
+  top: -15px;
+  left: -35px;
+  transform: scale(.5);
+  span{
+    font-size: 36px;
+  }
+  .port {
+    font-size: 36px;
+  }
+}
+.myname.active {
+  transform: translate(-50%, -50%);
   font-weight: bold;
-  color: $color-fff;
   animation-delay: 1.5s;
   animation-name: myName;
   animation-fill-mode: both;
   animation-duration: 1s;
   span {
     vertical-align: middle;
-    font-size: 36px;
     &.hide {
       animation-delay: .5s;
       animation-name: textAction;
       animation-fill-mode: both;
       animation-duration: .8s;
     }
-  }
-  .port {
-    font-size: 36px;
   }
 }
 
@@ -319,9 +326,12 @@ header {
   ul {
     padding-top:26%;
   }
-  li {
+  ul li {
     display:inline-block;
     margin:10px;
+  }
+  ul li img{
+    max-width: 100%;
   }
   text-align: center;
   transform: rotateY(0deg) perspective(800px);
@@ -472,12 +482,15 @@ header {
   }
   .mobile .portfolio_card{
     .front ul {
-     padding:20px;
+      padding:20px;
     }
     .back ul {
       opacity: 0;
       transition: 0.7s all;
-     }
+    }
+    .back ul li{
+      font-size: 1.2em;
+    }
     .back .back-content{
       overflow-y: hidden;
     }
@@ -491,7 +504,7 @@ header {
     }
     .back ul {
       opacity: 1;
-     }
+    }
     .back .back-content{
       overflow-y: auto;
     }

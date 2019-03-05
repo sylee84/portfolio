@@ -233,12 +233,28 @@ header .menu a {
 
 .myname {
   position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 0;
   text-align: center;
   font-size: 0;
-  font-weight: bold;
   color: #fff;
+  top: -15px;
+  left: -35px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.myname span {
+  font-size: 36px;
+}
+
+.myname .port {
+  font-size: 36px;
+}
+
+.myname.active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: bold;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   -webkit-animation-name: myName;
@@ -249,12 +265,11 @@ header .menu a {
           animation-duration: 1s;
 }
 
-.myname span {
+.myname.active span {
   vertical-align: middle;
-  font-size: 36px;
 }
 
-.myname span.hide {
+.myname.active span.hide {
   -webkit-animation-delay: .5s;
           animation-delay: .5s;
   -webkit-animation-name: textAction;
@@ -263,10 +278,6 @@ header .menu a {
           animation-fill-mode: both;
   -webkit-animation-duration: .8s;
           animation-duration: .8s;
-}
-
-.myname .port {
-  font-size: 36px;
 }
 
 @-webkit-keyframes myName {
@@ -395,9 +406,13 @@ header .menu a {
   padding-top: 26%;
 }
 
-.front li {
+.front ul li {
   display: inline-block;
   margin: 10px;
+}
+
+.front ul li img {
+  max-width: 100%;
 }
 
 .back {
@@ -568,6 +583,9 @@ header .menu a {
     opacity: 0;
     -webkit-transition: 0.7s all;
     transition: 0.7s all;
+  }
+  .mobile .portfolio_card .back ul li {
+    font-size: 1.2em;
   }
   .mobile .portfolio_card .back .back-content {
     overflow-y: hidden;
