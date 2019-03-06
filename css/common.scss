@@ -159,8 +159,9 @@ header {
   .menu {
     float: right;
     a {
-      color: $color-fff;
       padding: 0 10px;
+      font-weight: bold;
+      color: $color-fff;
       transition: .5s;
     }
   }
@@ -324,10 +325,10 @@ header {
     height: 100%;
   }
   h2 {
-    padding-top:24%;
+    margin-top:10em;
   }
   ul {
-    padding-top:2%;
+    margin-top:1em;
   }
   ul li {
     display:inline-block;
@@ -423,6 +424,28 @@ header {
   }
 }
 
+.swiper-slide{
+  transition: all 0.5s;
+  &.swiper-slide-active::after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+  }
+}
+.pc02.swiper-slide-active::after{
+  background:#ec743d url(../img/bg_plogo18.png) repeat 50%;
+  background-size: contain;
+}
+.pc03.swiper-slide-active::after{
+  background:url(../img/bg_plogo19.png) repeat 50%;
+  background-size: contain;
+}
+
 @media screen and (max-width: 800px) {
   .show-menu-btn, .hide-menu-btn {
     display: block;
@@ -466,11 +489,22 @@ header {
     }
   }
   .portfolio_card {
-    &.pc01 .front{
-      overflow-y:auto;
+    .front {
+      h2 {
+        margin-top:1em;
+      }
+      ul {
+        margin-top:0;
+      }
     }
     width: 75%;
     height: 80%;
+  }
+  
+  .pc01 .portfolio_card {
+    .front{
+      overflow-y:auto;
+    }
   }
   .click {
     display: block;
