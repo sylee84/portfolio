@@ -372,10 +372,6 @@ header .menu a {
   height: 80%;
 }
 
-.portfolio_card .front {
-  background-color: #fff;
-}
-
 .click {
   display: none;
 }
@@ -397,14 +393,18 @@ header .menu a {
   text-align: center;
   -webkit-transform: rotateY(0deg) perspective(800px);
           transform: rotateY(0deg) perspective(800px);
+  background-color: #fff;
+  background-image: radial-gradient(circle, #fff, #fff, #eee, #999, #999);
 }
 
 .front img {
   height: 100%;
 }
 
-.front h2 {
+.front .year {
+  display: block;
   margin-top: 10em;
+  font-size: 1.6em;
 }
 
 .front ul {
@@ -418,6 +418,48 @@ header .menu a {
 
 .front ul li img {
   max-width: 100%;
+}
+
+.front .logo_layaut {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.front .logo_layaut strong {
+  display: inline-block;
+  margin-top: 1em;
+  font-size: 1.6em;
+}
+
+.swiper-slide.swiper-slide-active .logo_layaut {
+  display: block;
+}
+
+.swiper-slide.swiper-slide-active .logo_layaut h2 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.swiper-slide.swiper-slide-active .logo_layaut strong {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .back {
@@ -549,6 +591,36 @@ header .menu a {
   background-size: contain;
 }
 
+.pc04.swiper-slide-active::after {
+  background: url(../img/bg_plogo20.png) repeat 50%;
+  background-size: contain;
+}
+
+.pc05.swiper-slide-active::after {
+  background: url(../img/bg_plogo21.png) repeat 50%;
+  background-size: contain;
+}
+
+.pc06.swiper-slide-active::after {
+  background: url(../img/bg_plogo22.png) repeat 50%;
+  background-size: contain;
+}
+
+.pc07.swiper-slide-active::after {
+  background: url(../img/bg_plogo23.png) repeat 50%;
+  background-size: contain;
+}
+
+.pc08.swiper-slide-active::after {
+  background: url(../img/bg_plogo24.png) repeat 50%;
+  background-size: contain;
+}
+
+.pc09.swiper-slide-active::after {
+  background: url(../img/bg_plogo25.png) repeat 50%;
+  background-size: contain;
+}
+
 @media screen and (max-width: 800px) {
   .show-menu-btn, .hide-menu-btn {
     display: block;
@@ -593,11 +665,15 @@ header .menu a {
     width: 75%;
     height: 80%;
   }
-  .portfolio_card .front h2 {
+  .portfolio_card .front .year {
     margin-top: 1em;
   }
   .portfolio_card .front ul {
     margin-top: 0;
+  }
+  .portfolio_card .front .logo_layaut h2 img {
+    max-width: 80%;
+    height: auto;
   }
   .pc01 .portfolio_card .front {
     overflow-y: auto;
@@ -623,6 +699,9 @@ header .menu a {
   }
   .mobile .portfolio_card .back ul li {
     font-size: 1.2em;
+  }
+  .mobile .portfolio_card .back ul li img {
+    max-width: 100%;
   }
   .mobile .portfolio_card .back .back-content {
     overflow-y: hidden;
