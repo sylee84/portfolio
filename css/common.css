@@ -179,6 +179,8 @@ header .menu a {
   position: absolute;
   overflow: hidden;
   z-index: -10;
+  width: 0;
+  height: 0;
 }
 
 .sec-1 {
@@ -486,6 +488,36 @@ header .menu a {
   color: #2c3e50;
 }
 
+.back-content .lay_img {
+  overflow: hidden;
+}
+
+.back-content .lay_img li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.back-content .lay_img li img {
+  width: 95%;
+}
+
+.back-content .lay_img.pc li {
+  width: 49%;
+}
+
+.back-content .lay_img.mo li {
+  width: 24%;
+}
+
+.back-content .desc {
+  margin: 20px;
+  margin-top: 0;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: #fff;
+}
+
 .pc .portfolio_card:hover > .front {
   -webkit-transform: rotateY(-180deg) perspective(800px);
           transform: rotateY(-180deg) perspective(800px);
@@ -705,6 +737,15 @@ header .menu a {
   }
   .mobile .portfolio_card .back .back-content {
     overflow-y: hidden;
+  }
+  .mobile .portfolio_card .back .back-content .lay_img.pc li {
+    width: 98%;
+  }
+  .mobile .portfolio_card .back .back-content .lay_img.mo li {
+    width: 49%;
+  }
+  .mobile .portfolio_card .back .back-content .desc {
+    font-size: 1em;
   }
   .mobile .portfolio_card.on > .front {
     -webkit-transform: rotateY(-180deg) perspective(800px);

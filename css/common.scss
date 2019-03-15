@@ -180,6 +180,8 @@ header {
   position: absolute;
   overflow: hidden;
   z-index: -10;
+  width:0;
+  height: 0;
 }
 
 .sec-1 {
@@ -392,6 +394,30 @@ header {
   height: 100%;
   text-align: left;
   color: #2c3e50;
+  .lay_img{
+    overflow:hidden;
+    li{
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      img{
+        width:95%;
+      }
+    }
+    &.pc li{
+      width:49%;
+    }
+    &.mo li{
+      width:24%;
+    }
+  }
+  .desc{
+    margin:20px;
+    margin-top:0;
+    padding:10px;
+    font-size:1.5em;
+    background-color:#fff;
+  }
 }
 
 .pc .portfolio_card:hover > {
@@ -593,6 +619,17 @@ header {
     }
     .back .back-content{
       overflow-y: hidden;
+      .lay_img{
+        &.pc li{
+          width:98%;
+        }
+        &.mo li{
+          width:49%;
+        }
+      }
+      .desc{
+        font-size:1em;
+      }
     }
   }
   .mobile .portfolio_card.on > {
