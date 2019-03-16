@@ -137,6 +137,13 @@ select {
 /* :root{
   --color-ff:#fff;
 } var(--color-ff) */
+.point_c1 {
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  background-color: #999;
+}
+
 header {
   z-index: 20;
   position: fixed;
@@ -489,25 +496,46 @@ header .menu a {
 }
 
 .back-content .lay_img {
+  position: relative;
   overflow: hidden;
+  font-size: 0;
+}
+
+.back-content .lay_img::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../img/list_bg.png) repeat-x left bottom;
+}
+
+.back-content .lay_img.afno::after {
+  display: none;
 }
 
 .back-content .lay_img li {
   display: inline-block;
+  margin-bottom: 5px;
   vertical-align: top;
   text-align: center;
 }
 
 .back-content .lay_img li img {
-  width: 95%;
+  width: 98%;
 }
 
-.back-content .lay_img.pc li {
-  width: 49%;
+.back-content .lay_img.pcul li {
+  width: 50%;
 }
 
-.back-content .lay_img.mo li {
-  width: 24%;
+.back-content .lay_img.moul li {
+  width: 25%;
+}
+
+.back-content .lay_img.moul.odd li {
+  width: 20%;
 }
 
 .back-content .desc {
@@ -738,11 +766,11 @@ header .menu a {
   .mobile .portfolio_card .back .back-content {
     overflow-y: hidden;
   }
-  .mobile .portfolio_card .back .back-content .lay_img.pc li {
-    width: 98%;
+  .mobile .portfolio_card .back .back-content .lay_img.pcul li {
+    width: 100%;
   }
-  .mobile .portfolio_card .back .back-content .lay_img.mo li {
-    width: 49%;
+  .mobile .portfolio_card .back .back-content .lay_img.moul li {
+    width: 50%;
   }
   .mobile .portfolio_card .back .back-content .desc {
     font-size: 1em;
