@@ -477,7 +477,6 @@ header {
 
 
 .portslide-next, .portslide-prev {
-  width:50%;
   z-index: 80;
   position: fixed;
   bottom: 10px;
@@ -486,11 +485,13 @@ header {
 }
 
 .portslide-next {
-  left: 0;
+  left: 50%;
+  margin-left: -100px;
 }
 
 .portslide-prev {
-  right: 0;
+  right: 50%;
+  margin-right: -100px;
 }
 
 .portslide {
