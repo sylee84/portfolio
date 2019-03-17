@@ -8,19 +8,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <script rel="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script rel="javascript" src="js/swiper.min.js"></script>
-  <script rel="javascript" src="js/jquery.inview.js"></script>
-  <script rel="javascript" src="js/common.js"></script>
-  <script rel="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-  
-  <script>
-  $(document).ready(function() {
-    $('img.lazy').lazy({
-        delay: 1000
-    });
-  });
-  </script>
 </head>
 <body class="main">
   <header>
@@ -726,6 +713,18 @@
       <div class="swiper-pagination"></div>
     </div>
   </section>
-
+  <script rel="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script rel="javascript" src="js/swiper.min.js"></script>
+  <script rel="javascript" src="js/jquery.inview.js"></script>
+  <script rel="javascript" src="js/common.js"></script>
+  <script rel="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script>
+  $(function() {
+    $("img.lazy").lazyload({
+      threshold: 50,
+      delay: 1000
+    });
+  });
+  </script>
 </body>
 </html>
