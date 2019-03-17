@@ -56,6 +56,7 @@ function cardSwiper(){
       speed: sPd,
       effect: 'coverflow',
       grabCursor: true,
+      simulateTouch: false,
       slidesPerView: 'auto',
       coverflowEffect: {
         rotate: roTa,
