@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* === bottom area === */
+#bottom_area {	
+	overflow:hidden
+}
+.bottom_layout {
+	width:1000px;
+	margin:58px auto 0;
+	padding:34px 20px;
+	border:1px solid #ddd;
+	-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
+}
+.bottom_layout ul{overflow:hidden;}
+.bottom_layout ul li{float:left;margin-left:40px;}
+.bottom_layout ul li:first-child{margin-left:0;}
+
+/* === bottom menu === */
+#bottom_menu {
+	border-top:1px solid #e5e5e5
+}
+.bottom_menu_layout {
+	position:relative;
+	width:1000px;
+	margin:0 auto;	
+}
+.bottom_menu_list {
+	text-align:left;
+	background-color:#fff;/* 사파리 폰트 깨짐 방지 */
+}
+.bottom_menu_list span {
+	height:39px;
+	padding:0 21px 0 18px;
+	background:url(../img/footer/line_middle.gif) no-repeat left 50%
+}
+.bottom_menu_list span.first {
+	padding-left:0;
+	background:none;
+}
+.bottom_menu_list span a {
+	font-size:12px;
+	line-height:39px;
+}
+.bottom_menu_layout .select_box{
+	position:absolute;
+	top:7px;
+	right:0;
+	width:auto;
+	min-width:100px;
+}
+.bottom_menu_layout div.select_box label{
+	line-height:22px;
+}
+/* === footer === */
+#footer{
+	margin-top:58px;
+}
+#footer .footer_btn{
+	width:1000px;
+	margin:0 auto;
+	text-align:right;
+}
+#footer .f_top{
+	width:46px;
+	height:39px;
+	text-indent:-9999px;
+	background:url(../img/footer/f_top.gif) no-repeat left top;
+}
+#footer_area {
+	border-top:1px solid #e5e5e5;
+}
+.footer_layout {
+	width:1000px;
+	margin:0 auto;
+	padding:34px 0;
+	overflow:hidden;
+	position:relative;
+}
+.footer_layout .tlt{
+	margin-bottom:16px;
+	font-size:14px;
+	color:#825353;
+}
+.footer_layout .txt{
+	color:#888;
+	margin-right:12px;	
+	font-size:12px;
+}
+.footer_layout .list li span{
+	color:#888;
+	margin-right:12px;	
+	font-size:12px;
+}
+.footer_layout .list li span a{color:#888;}
+.copyright {
+	margin-top:20px;
+	font-size:12px;
+	color:#888;
+}
+.footer_address {
+	float:left;
+	width:428px;
+	background-color:#fff;/* 사파리 폰트 깨짐 방지 */
+}
+.copyright strong{color:#962e45;}
+
+.footer_happy {
+	float:left;
+	width:280px;
+	background-color:#fff;/* 사파리 폰트 깨짐 방지 */
+}
+.footer_service {
+	float:left;
+	width:280px;
+	background-color:#fff;/* 사파리 폰트 깨짐 방지 */
+}
+
+

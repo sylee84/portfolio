@@ -1,0 +1,62 @@
+/* 
+ * Nanum Square Web Fonts
+ * https://github.com/hiun/NanumSquare
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com) 
+ */
+ 
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumSquareR.eot');
+  src: local('Nanum Square Regular'),
+       local('NanumSquareR'),
+       url('../font/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+       /*url('../font/NanumSquareR.woff2') format('woff2'),*/
+       url('../font/NanumSquareR.woff') format('woff'),
+       url('../font/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../font/NanumSquareB.eot');
+  src: local('Nanum Square Bold'),
+       local('NanumSquareB'),
+       url('../font/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+       /*url('../font/NanumSquareB.woff2') format('woff2'),*/
+       url('../font/NanumSquareB.woff') format('woff'),
+       url('../font/NanumSquareB.ttf') format('truetype');
+}
+@font-face {
+    font-family:'Nanum Gothic';
+    font-style: normal;
+	font-weight: normal;
+    src: url('../font/NanumGothic.eot');
+    src: url('../font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NanumGothic.woff2') format('woff2'),
+         url('../font/NanumGothic.woff') format('woff'),
+         url('../font/NanumGothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'Nanum Gothic';
+    font-style: bold;
+	font-weight: 700;
+    src: url('../font/NanumGothicBold.eot');
+    src: url('../font/NanumGothicBold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NanumGothicBold.woff2') format('woff2'),
+         url('../font/NanumGothicBold.woff') format('woff'),
+         url('../font/NanumGothicBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:'Nanum Gothic';
+    font-style: bold;
+	font-weight: 800;
+    src: url('../font/NanumGothicExtraBold.eot');
+    src: url('../font/NanumGothicExtraBold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NanumGothicExtraBold.woff2') format('woff2'),
+         url('../font/NanumGothicExtraBold.woff') format('woff'),
+         url('../font/NanumGothicExtraBold.ttf') format('truetype');
+}

@@ -65,9 +65,9 @@ function cardSwiper(){
         slideShadows : false,
       },
       pagination: {
-  			el: '.portslide .swiper-pagination',
-  			type: 'fraction',
-  		},
+        el: '.portslide .swiper-pagination',
+        type: 'fraction',
+      },
       navigation: {
         nextEl: '.portslide-prev',
         prevEl: '.portslide-next',

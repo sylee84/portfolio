@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* === promotion === */
+.promotion_head {
+	color:#fff;
+	font-size:15px;
+	font-weight:700;
+	text-align:center;
+	height:46px;
+	line-height:46px;
+	background:#765a60;
+	border-top:1px solid #fff;
+	position:relative
+}
+.promotion_head .btn_go_prev {
+	position:absolute;
+	top:50%;
+	margin-top:-18px;
+	left:3%;
+	width:36px;
+	height:36px;
+	border:1px solid #9f8c90
+}
+.icon_go_prev {
+	display:inline-block;
+	width:9px;
+	height:36px;
+	background:url(../img/common/icon_go_prev.png) no-repeat left 8px;
+	background-size:10px
+}
+
+.promotion_list_info {
+	text-align:center;
+}
+
+h2.promotion_stit {
+	padding:15px 3%;
+	color:#5d3231;
+	font-size:15px;
+	font-weight:700;
+	border-top:1px solid #d8d9da;
+	border-bottom:1px solid #d8d9da;
+	background:#f2eced;
+	position:relative
+}
+h2.promotion_stit span {
+	display:inline-block;
+	padding-left:10px;
+	background:url(../img/common/bul_dot.png) no-repeat left 6px;
+	background-size:5px
+}
+.promotion_date {
+	display:inline-block;
+	margin-top:10px;
+	font-size:10px;
+}
+
+.promotion_list {
+	margin:10px 0 0 0
+}
+.promotion_list li {
+	margin:0 0 5px 0
+}
+.promotion_list li a img {
+	width:100%;
+}
+.promotion_list_bottom {
+	margin:-1px 0 0 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #bebfc1;
+    overflow: hidden;
+}
+.promotion_content {
+	margin:10px 0 5px 0
+}
+.promotion_content img {
+	width:100%
+}

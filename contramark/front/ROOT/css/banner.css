@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* === banner === */
+#banner {overflow:hidden;}
+
+/*170420수정*/
+#banner h2{
+	line-height:40px;
+	text-align:center;
+	font-size:15px;
+	font-weight:normal;
+	color:#fff;
+}
+/*//170420수정*/
+.banner_slider{height:100%;}
+#banner .bx-wrapper {
+	overflow:hidden;
+	width:150px;
+	margin:0 auto;
+}
+#banner .bx-wrapper .bx-viewport li{
+	width:150px !important;
+	overflow:hidden;
+	height:180px;
+}
+#banner .bx-wrapper .bx-viewport li img{width:150px;}
+#banner .bx-wrapper .bx-pager {
+	position:relative;
+	height:14px;
+	margin-top:10px;
+	text-align: center;	
+	z-index:100;
+}
+#banner .bx-wrapper .bx-pager .bx-pager-item,
+#banner .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	vertical-align:top;
+	*zoom: 1;
+	*display: inline;
+}
+#banner .bx-wrapper .bx-pager.bx-default-pager a {
+	position:relative;
+	background: #e6e6e6;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;	
+	border-radius: 6px;
+}
+#banner .bx-wrapper .bx-pager.bx-default-pager a:hover,
+#banner .bx-wrapper .bx-pager.bx-default-pager a.active {background: #825353;}
+#banner .banner_not{width:150px; margin:0 auto; height:100px;padding-top:77px;line-height:14px;text-align:center; color:#fff; font-weight:normal; font-size:12px;} /*170417추가*/
