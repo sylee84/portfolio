@@ -676,11 +676,6 @@ header .menu a {
   background-size: contain;
 }
 
-.pc09.swiper-slide-active::after {
-  background: url(../img/bg_plogo25.png) repeat 50%;
-  background-size: contain;
-}
-
 @media screen and (max-width: 800px) {
   .show-menu-btn, .hide-menu-btn {
     display: block;
