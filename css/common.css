@@ -596,6 +596,7 @@ header .menu a {
 }
 
 .portslide-next, .portslide-prev {
+  width: 50%;
   z-index: 80;
   position: fixed;
   bottom: 10px;
@@ -604,13 +605,11 @@ header .menu a {
 }
 
 .portslide-next {
-  left: 50%;
-  margin-left: -100px;
+  left: 0;
 }
 
 .portslide-prev {
-  right: 50%;
-  margin-right: -100px;
+  right: 0;
 }
 
 .portslide .swiper-pagination {
