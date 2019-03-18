@@ -1,7 +1,6 @@
 var $body;
 $(document).ready(function() {
   $body = $('body');
-  bodyHide();
   windowRwd();
   cardTrans();
   cardSwiper();
@@ -11,6 +10,7 @@ $(document).ready(function() {
 });
 function windowRwd(){
   window.onload = function() {
+    $body.hide().fadeIn(1500);
     if ($(window).width() < 800){
       $body.addClass('mobile').removeClass('pc');
       //document.location.href = "";
@@ -27,12 +27,9 @@ function windowRwd(){
     }
   }
 }
-function bodyHide(){
-  $body.hide().fadeIn(1500);
-}
 function cardTrans(){
   $('.click').click(function(){
-   var $this = $(this);
+    var $this = $(this);
     if(!$this.parent().hasClass('on')){
       $this.parent().addClass('on');
     }else{
