@@ -1,7 +1,6 @@
 var $body;
 $(document).ready(function() {
   $body = $('body');
-  bodyHide();
   windowRwd();
   cardTrans();
   cardSwiper();
@@ -26,11 +25,6 @@ function windowRwd(){
       $body.addClass('pc').removeClass('mobile');
     }
   }
-}
-function bodyHide(){
-  jQuery.event.add(window,"load",function(){
-    $body.hide().fadeIn(1500);
-  });
 }
 function cardTrans(){
   $('.click').click(function(){
