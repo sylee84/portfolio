@@ -59,10 +59,6 @@ a:active, a:hover {
   /*text-decoration:underline*/
 }
 
-a:active {
-  background-color: transparent;
-}
-
 address, caption, cite, code, dfn, em, var {
   font-style: normal;
   font-weight: normal;
@@ -139,6 +135,7 @@ select {
 } var(--color-ff) */
 .point_c1 {
   display: inline-block;
+  margin-top: 10px;
   padding: 10px;
   color: #fff;
   background-color: #999;
@@ -531,6 +528,14 @@ header .menu a {
 }
 
 .back-content .lay_img.moul li {
+  width: 25%;
+}
+
+.back-content .lay_img.pcmoul li {
+  width: 75%;
+}
+
+.back-content .lay_img.pcmoul li:nth-child(2n) {
   width: 25%;
 }
 

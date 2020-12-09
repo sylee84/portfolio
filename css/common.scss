@@ -62,9 +62,6 @@ a {
   &:active, &:hover {
     /*text-decoration:underline*/
   }
-  &:active {
-    background-color: transparent;
-  }
 }
 
 address, caption, cite, code, dfn, em, var {
@@ -144,6 +141,7 @@ select {
 
 .point_c1{
   display: inline-block;
+  margin-top:10px;
   padding:10px;
   color:$color-fff;
   background-color:#999;
@@ -431,6 +429,14 @@ header {
     }
     &.moul li{
       width:25%;
+    }
+    &.pcmoul {
+      li{
+        width:75%;
+        &:nth-child(2n){
+            width: 25%;
+        }
+      }
     }
     &.moul.odd li{
       width:20%;

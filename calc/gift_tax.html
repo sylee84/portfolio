@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CEO클리닉">
+    <!--default-->
+    <meta property="og:description" content="선택에 따라 결과는 달라집니다 CEO클리닉">
+    <meta property="og:image" content="http://ceo-clinic.co.kr/images/peoplelife_logo.jpg">
+    
+    <title>증여세</title>
+    <link rel="stylesheet" href="http://ceo-clinic.co.kr/css/common.css" type="text/css">
+    
+    <style>
+    *{
+        outline: none;
+    }
+    </style>
+    <style>
+        input{font-size: 18px;}
+        .cal-wrap{width:100%;height: 100%;line-height: 1.4;}
+        .cal-wrap .cal-inner{padding:20px 10px;}
+        .cal-wrap h2{text-align:center;font-size:24px;font-weight:bold;}
+        .cal-wrap p.txt{margin-top:20px;text-align:center;font-size:16px;}
+        .cal-wrap .cal-contents{margin-top:20px;}
+        .cal-wrap .cal-contents .cal-box{}
+        .cal-wrap .cal-contents .cal-box dl{display: flex;justify-content: space-between; margin-bottom:10px;}
+        .cal-wrap .cal-contents .cal-box dl dt{width:48%;height:30px;line-height:30px;font-weight:bold;}
+        .cal-wrap .cal-contents .cal-box dl dt.twoline{font-size: 12px;line-height: 1;}
+        .cal-wrap .cal-contents .cal-box dl dt.minus{color:#0069c4;}
+        .cal-wrap .cal-contents .cal-box dl dd{width:50%;text-align:right;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input{position:relative;display: block;width:100%;height:30px;line-height:30px;padding: 0 6px;text-align:left;border:1px solid #e8e8e8;border-radius: 4px;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input::after{display:inline-block;width:34px;text-align: right;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input.won::after{content: '억원';}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input.family::after{content: '명';}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input input{width: calc(100% - 34px);text-align:right;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio{display: flex;justify-content: space-between;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input[type=radio]{display:none;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input + label{width:49.5%;height:30px;line-height:30px;text-align:center;border:1px solid #e8e8e8;border-radius: 4px;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input:checked + label{color:#fff;border:none;background-color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box{margin-bottom:10px;padding:10px;background-color:#e8e8e8;}
+        .cal-wrap .cal-contents .gray-box strong{font-weight:bold;font-size:18px;}
+        .cal-wrap .cal-contents .gray-box input{width:50px;height:30px;margin-bottom:5px;padding: 0 5px;text-align:right;border:1px solid #0073c8;background-color: #fff;}
+        .cal-wrap .cal-contents .gray-box span{font-weight:bold;font-size:22px;color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box span.txt{font-size:18px;}
+        .cal-wrap .cal-contents .gray-box i{font-weight:bold;color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box .confirm{text-align: right;}
+        .cal-wrap .cal-contents .gray-box .confirm button{padding:0 5px;height:34px;line-height:34px;color:#fff;background-color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box .confirm strong{display:none;width:100%;font-size:30px;color:#0073c8;border-bottom:1px solid #000;}
+        .cal-wrap .cal-contents .gray-box .confirm strong::after{content: '억원';color:#000;}
+        .cal-wrap .cal-contents .cal-select{position: relative;width:100%;margin-bottom:10px;}
+        .cal-wrap .cal-contents .cal-select::after{content: '';position:absolute;top:14px;right:10px;width:10px;height:10px;border-right:3px solid #000;border-bottom:3px solid #000;transform: rotate(45deg);}
+        .cal-wrap .cal-contents .cal-select select{width:100%;height:40px;text-indent:10px;font-size:16px;border:1px solid #e8e8e8;}
+        .cal-wrap .description{margin-bottom:20px;text-indent: -10px;padding-left: 10px;}
+        .cal-wrap .btn-area{text-align:center;}
+        .cal-wrap .btn-area button{width:50%;height:40px;font-size: 16px;color:#fff;border-radius: 20px;background-color:#0073c8;}
+    </style>
+</head>
+<body>
+    <div class="cal-wrap">
+        <div class="cal-inner">
+            <h2>나의 재산을 증여한다면?</h2>
+            <p class="txt">현재가치를 기준으로 가족에게 승계될 재산</p>
+            <div class="cal-contents">
+                <div class="cal-box">
+                    <dl>
+                        <dt>재산</dt>
+                        <dd><span class="cal-input won"><input type="number" class="type-text" name="property" placeholder="0"></span></dd>
+                    </dl>
+                    <dl>
+                        <dt>채무</dt>
+                        <dd><span class="cal-input won"><input type="number" class="type-text" name="financial-obligation" placeholder="0"></span></dd>
+                    </dl>
+                </div>
+                <div class="gray-box">
+                    <strong>누구에게</strong> 주고자 하십니까?
+                </div>
+                <div class="cal-select">
+                    <select name="cal-person" id="">
+                        <option value="">선택하세요</option>
+                        <option value="6">배우자</option>
+                        <option value="0.5">부모 조부모</option>
+                        <option value="0.5">자녀(성년)</option>
+                        <option value="0.2">자녀(미성년)</option>
+                        <option value="0.5">손주(성년)</option>
+                        <option value="0.2">손주(미성년)</option>
+                        <option value="0.1">기타친족</option>
+                        <option value="0">타인</option>
+                    </select>
+                </div>
+                <div class="gray-box">
+                    위의 재산 ( <span id="step1-sum" class="value-txt">&nbsp;&nbsp;&nbsp;&nbsp;</span> )억원을 ( <span id="step1-person" class="txt value-txt">&nbsp;&nbsp;&nbsp;&nbsp;</span> )에게<br>
+                    현재 증여한다면 <strong>증여세</strong>는 ( <span id="step1-tax" class="value-txt">&nbsp;&nbsp;&nbsp;&nbsp;</span> )억원 입니다.
+                </div>
+            </div>
+            <p class="description">* 본 계산기는 대략적인 금액을 예측하는 참고용 입니다.</p>
+            <div class="btn-area">
+                <button type="button" class="re-cal">다시계산하기</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+
+        (function(){
+            const property              = document.querySelector('[name="property"]');
+            const financialObligation   = document.querySelector('[name="financial-obligation"]');
+            const calPerson             = document.querySelector('[name="cal-person"]');
+
+            calPerson.addEventListener('change', ()=> {
+                const propertyVl            = property.value;
+                const financialObligationVl = financialObligation.value;
+                const calPersonVl           = calPerson.value;
+                const calPersonTxt          = calPerson.options[calPerson.selectedIndex].text;
+
+                const step1Sum              = document.getElementById('step1-sum');
+                const step1Person           = document.getElementById('step1-person');
+                const step1Tax              = document.getElementById('step1-tax');
+
+                let sum = Number(propertyVl) - Number(financialObligationVl);
+                let tax = sum - Number(calPersonVl);
+
+                if(tax >= 30) tax = (tax * 0.5) - 4.6;
+                else if(tax >= 10) tax = (tax * 0.4) - 1.6;
+                else if(tax >= 5) tax = (tax * 0.3) - 0.6;
+                else if(tax >= 1) tax = (tax * 0.2) - 0.1;
+                else if(tax < 1) tax = (tax * 0.1);
+
+                if(calPersonTxt == '손주(성년)'){
+                    tax = tax * 1.3;
+                }
+                if(calPersonTxt == '손주(미성년)'){
+                    if(sum>20) tax = tax * 1.4;
+                    else tax = tax * 1.3;
+                }
+
+                if(tax < 0) tax = 0;
+
+                step1Sum.innerHTML    = sum.toLocaleString();
+                step1Person.innerHTML = calPersonTxt;
+                step1Tax.innerHTML    = tax.toFixed(2);
+            });
+
+            document.querySelector('.btn-area .re-cal').addEventListener('click', ()=> {
+                const typeTxts = document.getElementsByClassName('type-text');
+                const valueTxt = document.getElementsByClassName('value-txt');
+
+                calPerson.value = '';
+                for(let i = 0;i < typeTxts.length;i++) typeTxts[i].value = '';
+                for(let i = 0;i < valueTxt.length;i++) valueTxt[i].innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;';
+            })
+
+        })()
+
+    </script>
+</body>
+</html>

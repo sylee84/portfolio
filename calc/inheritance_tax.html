@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CEO클리닉">
+    <!--default-->
+    <meta property="og:description" content="선택에 따라 결과는 달라집니다 CEO클리닉">
+    <meta property="og:image" content="http://ceo-clinic.co.kr/images/peoplelife_logo.jpg">
+    
+    <title>상속세</title>
+    <link rel="stylesheet" href="http://ceo-clinic.co.kr/css/common.css" type="text/css">
+    
+    <style>
+    *{
+        outline: none;
+    }
+    </style>
+    <style>
+        input{font-size: 18px;}
+        .cal-wrap{width:100%;height: 100%;line-height: 1.4;}
+        .cal-wrap .cal-inner{padding:20px 10px;}
+        .cal-wrap h2{text-align:center;font-size:24px;font-weight:bold;}
+        .cal-wrap p.txt{margin-top:20px;text-align:center;font-size:16px;}
+        .cal-wrap .cal-contents{margin-top:20px;}
+        .cal-wrap .cal-contents .cal-box{}
+        .cal-wrap .cal-contents .cal-box dl{display: flex;justify-content: space-between; margin-bottom:10px;}
+        .cal-wrap .cal-contents .cal-box dl dt{width:48%;height:30px;line-height:30px;font-weight:bold;}
+        .cal-wrap .cal-contents .cal-box dl dt.twoline{font-size: 12px;line-height: 1;}
+        .cal-wrap .cal-contents .cal-box dl dt.minus{color:#0069c4;}
+        .cal-wrap .cal-contents .cal-box dl dd{width:50%;text-align:right;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input{position:relative;display: block;width:100%;height:30px;line-height:30px;padding: 0 6px;text-align:left;border:1px solid #e8e8e8;border-radius: 4px;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input::after{display:inline-block;width:34px;text-align: right;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input.won::after{content: '억원';}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input.family::after{content: '명';}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-input input{width: calc(100% - 34px);text-align:right;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio{display: flex;justify-content: space-between;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input[type=radio]{display:none;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input + label{width:49.5%;height:30px;line-height:30px;text-align:center;border:1px solid #e8e8e8;border-radius: 4px;}
+        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input:checked + label{color:#fff;border:none;background-color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box{margin-bottom:10px;padding:10px;background-color:#e8e8e8;}
+        .cal-wrap .cal-contents .gray-box strong{font-weight:bold;font-size:18px;}
+        .cal-wrap .cal-contents .gray-box input{width:50px;height:30px;margin-bottom:5px;padding: 0 5px;text-align:right;border:1px solid #0073c8;background-color: #fff;}
+        .cal-wrap .cal-contents .gray-box span{font-weight:bold;font-size:22px;color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box span.txt{font-size:18px;}
+        .cal-wrap .cal-contents .gray-box b{font-weight:bold;font-size:18px;color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box .confirm{text-align: right;}
+        .cal-wrap .cal-contents .gray-box .confirm button{padding:0 10px;height:38px;line-height:38px;font-size:16px;color:#fff;background-color:#0073c8;}
+        .cal-wrap .cal-contents .gray-box .confirm strong{display:none;width:100%;font-size:30px;color:#0073c8;border-bottom:1px solid #000;}
+        .cal-wrap .cal-contents .gray-box .confirm strong::after{content: '억원';color:#000;}
+        .cal-wrap .cal-contents .cal-select{position: relative;width:100%;margin-bottom:10px;}
+        .cal-wrap .cal-contents .cal-select::after{content: '';position:absolute;top:14px;right:10px;width:10px;height:10px;border-right:3px solid #000;border-bottom:3px solid #000;transform: rotate(45deg);}
+        .cal-wrap .cal-contents .cal-select select{width:100%;height:40px;text-indent:10px;font-size:16px;border:1px solid #e8e8e8;}
+        .cal-wrap .description{margin-bottom:20px;text-indent: -10px;padding-left: 10px;}
+        .cal-wrap .btn-area{text-align:center;}
+        .cal-wrap .btn-area button{width:50%;height:40px;font-size: 16px;color:#fff;border-radius: 20px;background-color:#0073c8;}
+    </style>
+</head>
+<body>
+    <div class="cal-wrap">
+        <div class="cal-inner">
+            <h2>남겨진 가족이 납부할 세금은?</h2>
+            <p class="txt">준비되지 않는 상속이나 증여 엄청난 자산 손실</p>
+            <div class="cal-contents">
+                <div class="gray-box">
+                    부동산재산 <input type="text" class="propertyNum type-text" name="inherited-property">억원<br>
+                    금융재산(금융자산-금융채무) <input type="text" class="propertyNum type-text" name="financial-wealth">억원<br>
+                    사전증여재산(10년이내) <input type="text" class="propertyNum type-text" name="prior-donation-Property">억원
+                </div>
+                <div class="cal-box">
+                    <dl>
+                        <dt>배우자</dt>
+                        <dd>
+                            <div class="cal-radio">
+                                <input type="radio" name="spouse" id="spouseY">
+                                <label for="spouseY">있음</label>
+                                <input type="radio" name="spouse" id="spouseN">
+                                <label for="spouseN">없음</label>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>자녀</dt>
+                        <dd><span class="cal-input family"><input type="number" placeholder="0" name="family1-num" class="type-text"></span></dd>
+                    </dl>
+                    <dl>
+                        <dt class="twoline">동거가족중 65세이상인가족<br>(배우자 제외)</dt>
+                        <dd><span class="cal-input family"><input type="number" placeholder="0" name="family2-num" class="type-text"></span></dd>
+                    </dl>
+                </div>
+                <div class="gray-box">
+                    <p>현재 시점 기준으로 <b>상속세</b>는</p>
+                    <div class="confirm">
+                        <button type="button" id="first-confirm">상속세확인</button>
+                        <strong id="first-confirm-sum"></strong>
+                    </div>
+                </div>
+                <div class="gray-box">
+                    <p>
+                        만약 <input type="text" id="year-num" class="type-text">년 뒤에 사망하시고<br>
+                        그 사이 재산이 연 <input type="text" id="percent-num" class="type-text"> %의 자산상승이 있다면<br> 그 시점의( <span id="yp-sum">&nbsp;&nbsp;&nbsp;&nbsp;</span> )억 원의 재산, <b>상속세</b>는
+                    </p>
+                    <div class="confirm">
+                        <button type="button" id="second-confirm">상속세확인</button>
+                        <strong id="second-confirm-sum"></strong>
+                    </div>
+                </div>
+            </div>
+            <p class="description">* 본 계산기는 대략적인 금액을 예측하는 참고용 입니다.</p>
+            <div class="btn-area">
+                <button type="button" class="re-cal">다시계산하기</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+
+        (function(){
+
+            const propertyNums    = document.getElementsByClassName('propertyNum');
+            const inherited       = document.querySelector('[name=inherited-property]');
+            const financialWealth = document.querySelector('[name=financial-wealth]');
+            const prior           = document.querySelector('[name=prior-donation-Property]');
+            const family1Num      = document.querySelector('[name=family1-num]');
+            const family2Num      = document.querySelector('[name=family2-num]');
+            const firstConfirm    = document.getElementById('first-confirm');
+            const secondConfirm   = document.getElementById('second-confirm');
+            const spouse          = document.getElementsByName('spouse');
+
+            //소수점 자릿수
+            function decimalPoint(){
+                const regexp = /^\d*(\.\d{0,2})?$/; 
+                let numValue = "";
+
+                function imsi(obj) {
+                    if(obj.value.search(regexp)==-1) obj.value = numValue;
+                    else numValue = obj.value;
+                }
+                for(let i=0;i < propertyNums.length;i++){
+                    propertyNums[i].addEventListener('keyup', ()=> {
+                        imsi(propertyNums[i]);
+                    })
+                }
+            }
+            decimalPoint();
+
+            let overstandardTax = (s, sc)=> {
+                if(s >= 30) sc = (sc * 0.5) - 4.6;
+                else if(s >= 10) sc = (sc * 0.4) - 1.6;
+                else if(s >= 5) sc = (sc * 0.3) - 0.6;
+                else if(s >= 1) sc = (sc * 0.2) - 0.1;
+                else if(s < 1) sc = (sc * 0.1);
+
+                return sc;
+            }
+
+            let spouseCal = (fy, sp)=>{
+                let spouseNum   = '';
+
+                if(spouse[0].checked == true){
+                    let deduction = sp*(1.5/(1.5+Number(fy)));
+                    let arr       = [30, deduction];
+
+                    if(Math.min.apply(null, arr) > 5){
+                        spouseNum = Math.min.apply(null, arr)
+                    }else{
+                        spouseNum = 5;
+                    }
+                }else{
+                    spouseNum = 0;
+                }
+
+                return spouseNum;
+            }
+
+            firstConfirm.addEventListener('click', (e)=>{
+                const family1NumVl      = family1Num.value;
+                const family2NumVl      = family2Num.value;
+                const inheritedVl       = inherited.value;
+                const financialWealthVl = financialWealth.value;
+                const priorVl           = prior.value;
+
+                let target      = e.target;
+                let sumProperty = Number(inheritedVl) + Number(financialWealthVl) + Number(priorVl);
+
+                if(spouse[0].checked !== true&&spouse[1].checked !== true){
+                    alert('배우자 유무를 체크하세요.')
+                    return false;
+                }
+
+                let collectiveDeduction = 2 + (Number(family1NumVl) * 0.5) + (Number(family2NumVl) * 0.5);
+
+                if(collectiveDeduction < 5) collectiveDeduction = 5;
+
+                let financialWealthSum = Number(financialWealthVl);
+
+                if(financialWealthSum > 0.2){
+                    financialWealthSum = financialWealthSum * 0.2;
+                    if(financialWealthSum < 0.2){
+                        financialWealthSum = 0.2;
+                    }
+                    if(financialWealthSum > 2){
+                        financialWealthSum = 2;
+                    }
+                }
+                console.log(financialWealthSum)
+
+                let sum = sumProperty - collectiveDeduction - spouseCal(family1NumVl, sumProperty) - financialWealthSum;
+
+                if(spouse[0].checked !== true) sum = sum - spouseCal(family1NumVl, sumProperty)
+
+                let sumCal = sum;
+                let otNum  = overstandardTax(sum, sumCal).toFixed(2);
+
+                if(Number(otNum) < 0) otNum = 0;
+
+                document.getElementById('first-confirm-sum').innerText = otNum;
+
+                target.nextElementSibling.style.display = 'block';
+            })
+
+            secondConfirm.addEventListener('click', (e)=>{
+                const yearNumVl         = document.getElementById('year-num').value;
+                const percentNumVl      = document.getElementById('percent-num').value;
+                const family1NumVl      = family1Num.value;
+                const family2NumVl      = family2Num.value;
+                const inheritedVl       = inherited.value;
+                const financialWealthVl = financialWealth.value;
+                const priorVl           = prior.value;
+
+                let target        = e.target;
+                let sumProperty   = Number(inheritedVl) + Number(financialWealthVl);
+                let percentage    = 1+1/100*percentNumVl;
+                let percentageSum = (Math.pow((percentage*100)/100,yearNumVl)*sumProperty) + Number(priorVl);
+
+                console.log(Math.pow((percentage*100)/100,yearNumVl),inheritedVl)
+
+                if(inherited.value == ''){
+                    alert('상속재산을 기입하시오.');
+                    return false;
+                }else if(spouse[0].checked !== true&&spouse[1].checked !== true){
+                    alert('배우자 유무를 체크하세요.')
+                    return false;
+                }else if(yearNumVl == ''){
+                    alert('년도를 기입하시오.');
+                    return false;
+                }else if(percentNumVl == ''){
+                    alert('%를 기입하시오.');
+                    return false;
+                }
+
+                let collectiveDeduction = 2 + (Number(family1NumVl) * 0.5) + (Number(family2NumVl) * 0.5);
+
+                if(collectiveDeduction < 5) collectiveDeduction = 5;
+
+                let financialWealthSum = Number(financialWealthVl);
+                if(financialWealthSum > 0.2){
+                    financialWealthSum = (financialWealthSum * 0.2) < 0.2 ? 0.2 : financialWealthSum;
+                }else if(financialWealthSum > 2){
+                    financialWealthSum = 2;
+                }
+
+                let sum    = percentageSum - collectiveDeduction - spouseCal(family1NumVl, sumProperty) - financialWealthSum;
+                let sumCal = sum;
+                let otNum  = overstandardTax(sum, sumCal).toFixed(2)
+
+                if(Number(otNum) < 0) otNum = 0;
+
+                document.getElementById('yp-sum').innerText = percentageSum.toFixed(2);
+                document.getElementById('second-confirm-sum').innerText = otNum;
+
+                target.nextElementSibling.style.display = 'block';
+            })
+
+            document.querySelector('.btn-area .re-cal').addEventListener('click', ()=> {
+                const typeTxts = document.getElementsByClassName('type-text');
+
+                for(let i = 0;i < typeTxts.length;i++) typeTxts[i].value = null;
+                for(let i = 0;i < spouse.length;i++) spouse[i].checked = false;
+
+                document.getElementById('yp-sum').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;';
+
+                firstConfirm.nextElementSibling.style.display  = 'none';
+                secondConfirm.nextElementSibling.style.display = 'none';
+            })
+
+        })()
+    </script>
+</body>
+</html>
