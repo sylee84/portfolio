@@ -396,6 +396,7 @@ header .menu a {
 }
 
 .front {
+  z-index:100;
   text-align: center;
   -webkit-transform: rotateY(0deg) perspective(800px);
           transform: rotateY(0deg) perspective(800px);
