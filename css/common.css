@@ -739,6 +739,9 @@ header .menu a {
   .pc01 .portfolio_card .front {
     overflow-y: auto;
   }
+  .pc01 .portfolio_card.on .front {
+    overflow-y: hidden;
+  }
   .click {
     display: block;
     position: absolute;
