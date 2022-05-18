@@ -790,6 +790,7 @@ header .menu a {
   .mobile .portfolio_card.on > .back ul {
     opacity: 1;
   }
+  .mobile .portfolio_card.on > .back,
   .mobile .portfolio_card.on > .back .back-content {
     overflow-y: auto;
   }
