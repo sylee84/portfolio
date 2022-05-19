@@ -793,6 +793,7 @@ header .menu a {
   .mobile .portfolio_card.on > .back,
   .mobile .portfolio_card.on > .back .back-content {
     overflow-y: auto;
+    border:1px solid red;
   }
   .portslide .fa-arrow-circle-down {
     display: block;
