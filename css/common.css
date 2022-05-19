@@ -784,14 +784,15 @@ header .menu a {
             transform: rotateY(-180deg) perspective(800px);
   }
   .mobile .portfolio_card.on > .back {
+    z-index: 100;
     -webkit-transform: rotateY(0deg) perspective(800px);
             transform: rotateY(0deg) perspective(800px);
   }
-  .mobile .portfolio_card.on > .back ul {
-    opacity: 1;
-  }
   .mobile .portfolio_card.on > .back .back-content {
     overflow-y: auto;
+  }
+  .mobile .portfolio_card.on > .back ul {
+    opacity: 1;
   }
   .portslide .fa-arrow-circle-down {
     display: block;
