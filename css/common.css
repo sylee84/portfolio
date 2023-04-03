@@ -350,7 +350,7 @@ header .menu a {
 }
 
 .front, .back {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -702,7 +702,6 @@ header .menu a {
     font-size: 1em;
   }
   .mobile .portfolio_card.on > .front {
-    overflow: initial;
     transform: rotateY(-180deg) perspective(800px);
   }
   .mobile .portfolio_card.on > .back {
