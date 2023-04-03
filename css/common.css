@@ -371,7 +371,7 @@ header .menu a {
 }
 .front .year {
   display: block;
-  margin-top: 10em;
+  margin-top: 4em;
   font-size: 1.6em;
 }
 .front ul {
@@ -702,6 +702,7 @@ header .menu a {
     font-size: 1em;
   }
   .mobile .portfolio_card.on > .front {
+    overflow: initial;
     transform: rotateY(-180deg) perspective(800px);
   }
   .mobile .portfolio_card.on > .back {
