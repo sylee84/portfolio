@@ -706,6 +706,7 @@ header .menu a {
     transform: rotateY(-180deg) perspective(800px);
   }
   .mobile .portfolio_card.on > .back {
+    overflow-y: auto;
     transform: rotateY(0deg) perspective(800px);
   }
   .mobile .portfolio_card.on > .back ul {
