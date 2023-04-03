@@ -6,56 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta property="og:type" content="article">
-    <meta property="og:title" content="CEO클리닉">
+    <meta property="og:title" content="중여세 js">
     <!--default-->
-    <meta property="og:description" content="선택에 따라 결과는 달라집니다 CEO클리닉">
-    <meta property="og:image" content="http://ceo-clinic.co.kr/images/peoplelife_logo.jpg">
+    <meta property="og:description" content="증여세 계산기">
     
     <title>증여세</title>
-    
-    <style>
-        *{
-            outline: none;
-        }
-        input{font-size: 18px;border:none;}
-        select{appearance: none;}
-        .cal-wrap{width:100%;height: 100%;line-height: 1.4;}
-        .cal-wrap .cal-inner{padding:20px 10px;}
-        .cal-wrap h2{text-align:center;font-size:24px;font-weight:bold;}
-        .cal-wrap p.txt{margin-top:20px;text-align:center;font-size:16px;}
-        .cal-wrap .cal-contents{margin-top:20px;}
-        .cal-wrap .cal-contents .cal-box{}
-        .cal-wrap .cal-contents .cal-box dl{display: flex;justify-content: space-between; margin-bottom:10px;}
-        .cal-wrap .cal-contents .cal-box dl dt{width:48%;height:30px;line-height:30px;font-weight:bold;}
-        .cal-wrap .cal-contents .cal-box dl dt.twoline{font-size: 12px;line-height: 1;}
-        .cal-wrap .cal-contents .cal-box dl dt.minus{color:#0069c4;}
-        .cal-wrap .cal-contents .cal-box dl dd{width:50%;text-align:right;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-input{position:relative;display: block;width:100%;height:30px;line-height:30px;padding: 0 6px;text-align:left;border:1px solid #e8e8e8;border-radius: 4px;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-input::after{display:inline-block;width:34px;text-align: right;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-input.won::after{content: '억원';}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-input.family::after{content: '명';}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-input input{width: calc(100% - 44px);text-align:right;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-radio{display: flex;justify-content: space-between;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input[type=radio]{display:none;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input + label{width:49.5%;height:30px;line-height:30px;text-align:center;border:1px solid #e8e8e8;border-radius: 4px;}
-        .cal-wrap .cal-contents .cal-box dl dd .cal-radio input:checked + label{color:#fff;border:none;background-color:#0073c8;}
-        .cal-wrap .cal-contents .gray-box{margin-bottom:10px;padding:10px;background-color:#e8e8e8;}
-        .cal-wrap .cal-contents .gray-box strong{font-weight:bold;font-size:18px;}
-        .cal-wrap .cal-contents .gray-box input{width:50px;height:30px;margin-bottom:5px;padding: 0 5px;text-align:right;border:1px solid #0073c8;background-color: #fff;}
-        .cal-wrap .cal-contents .gray-box span{font-weight:bold;font-size:22px;color:#0073c8;}
-        .cal-wrap .cal-contents .gray-box span.txt{font-size:18px;}
-        .cal-wrap .cal-contents .gray-box i{font-weight:bold;color:#0073c8;}
-        .cal-wrap .cal-contents .gray-box .confirm{text-align: right;}
-        .cal-wrap .cal-contents .gray-box .confirm button{padding:0 5px;height:34px;line-height:34px;color:#fff;background-color:#0073c8;}
-        .cal-wrap .cal-contents .gray-box .confirm strong{display:none;width:100%;font-size:30px;color:#0073c8;border-bottom:1px solid #000;}
-        .cal-wrap .cal-contents .gray-box .confirm strong::after{content: '억원';color:#000;}
-        .cal-wrap .cal-contents .cal-select{position: relative;width:100%;margin-bottom:10px;}
-        .cal-wrap .cal-contents .cal-select::after{content: '';position:absolute;top:14px;right:10px;width:10px;height:10px;border-right:3px solid #000;border-bottom:3px solid #000;transform: rotate(45deg);}
-        .cal-wrap .cal-contents .cal-select select{width:100%;height:40px;text-indent:10px;font-size:16px;border:1px solid #e8e8e8;}
-        .cal-wrap .description{margin-bottom:20px;text-indent: -10px;padding-left: 10px;}
-        .cal-wrap .btn-area{text-align:center;}
-        .cal-wrap .btn-area button{width:50%;height:40px;font-size: 16px;color:#fff;border-radius: 20px;background-color:#0073c8;}
-    </style>
+    <link rel="stylesheet" href="./common.css">
 </head>
 <body>
     <div class="cal-wrap">
